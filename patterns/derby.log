@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sat May 05 00:21:09 EEST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0163-2d07-b037-00000716ec10 
-on database directory memory:/home/dima/Algorithms and Data Structures/patterns/codejava/webdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@28c97a5 
-Loaded from file:/home/dima/Algorithms%20and%20Data%20Structures/patterns/lib/derby-10.14.1.0.jar
+Sat May 05 09:27:58 EEST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0163-2efc-5098-00000716bf78 
+on database directory memory:/home/dima/Design_Patterns/patterns/codejava/webdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4459eb14 
+Loaded from file:/home/dima/Design_Patterns/patterns/lib/derby-10.14.1.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=10.0.1+10
-user.dir=/home/dima/Algorithms and Data Structures/patterns
+user.dir=/home/dima/Design_Patterns/patterns
 os.name=Linux
 os.arch=amd64
 os.version=4.15.0-20-generic

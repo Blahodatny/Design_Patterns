@@ -22,7 +22,7 @@ public class Greeting {
     }
 
     public void showImage() throws IOException {
-        File f = new File(System.getProperty("user.dir")+ "/data/" + imageName);
+        File f = new File(System.getProperty("user.dir") + "/data/" + imageName);
         Desktop dt = Desktop.getDesktop();
         dt.open(f);
     }

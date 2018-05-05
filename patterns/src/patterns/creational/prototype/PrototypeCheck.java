@@ -23,6 +23,10 @@ public class PrototypeCheck {
         Deanery deanery1 = (Deanery) deanery.clone();
         students.add(deanery1);
 
+        Deanery deanery2 = new Deanery();
+        deanery.setProgress(100);
+        students.add(deanery2);
+
         Polyclinic polyclinic = new Polyclinic();
         polyclinic.setWeight(56.43);
         polyclinic.setHeight((float) 198.56);
