@@ -16,11 +16,10 @@ public class YouTubeCacheProxy implements ThirdPartyYouTubeLib {
     }
 
     public HashMap<String, Video> popularVideos() {
-        if (cachePopular.isEmpty()) {
+        if (cachePopular.isEmpty())
             cachePopular = youtubeService.popularVideos();
-        } else {
+        else
             System.out.println("Retrieved list from cache.");
-        }
         return cachePopular;
     }
 
@@ -29,9 +28,8 @@ public class YouTubeCacheProxy implements ThirdPartyYouTubeLib {
         if (video == null) {
             video = youtubeService.getVideo(videoId);
             cacheAll.put(videoId, video);
-        } else {
+        } else
             System.out.println("Retrieved video '" + videoId + "' from cache.");
-        }
         return video;
     }
 }

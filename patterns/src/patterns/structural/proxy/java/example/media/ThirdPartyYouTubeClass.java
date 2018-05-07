@@ -3,6 +3,7 @@ package patterns.structural.proxy.java.example.media;
 import patterns.structural.proxy.java.example.media.interfaces.ThirdPartyYouTubeLib;
 
 import java.util.HashMap;
+import java.util.stream.IntStream;
 
 public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
     public HashMap<String, Video> popularVideos() {
@@ -24,13 +25,13 @@ public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
 
     private void experienceNetworkLatency() {
         int randomLatency = random();
-        for (int i = 0; i < randomLatency; i++) {
+        IntStream.range(0, randomLatency).forEach(i -> {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
-        }
+        });
     }
 
     private void connectToServer(String server) {

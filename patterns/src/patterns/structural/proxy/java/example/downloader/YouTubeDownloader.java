@@ -26,9 +26,7 @@ public class YouTubeDownloader {
         HashMap<String, Video> list = api.popularVideos();
         System.out.println("\n-------------------------------");
         System.out.println("Most popular videos on Youtube (imagine fancy HTML)");
-        for (Video video : list.values()) {
-            System.out.println("ID: " + video.getId() + " / Title: " + video.getTitle());
-        }
+        list.values().stream().map(video -> "ID: " + video.getId() + " / Title: " + video.getTitle()).forEach(System.out::println);
         System.out.println("-------------------------------\n");
     }
 }

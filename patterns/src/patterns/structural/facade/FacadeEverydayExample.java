@@ -13,9 +13,8 @@ public class FacadeEverydayExample {
 
             String inputLine;
 
-            while ((inputLine = in.readLine()) != null) {
+            while ((inputLine = in.readLine()) != null)
                 System.out.println(inputLine);
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }

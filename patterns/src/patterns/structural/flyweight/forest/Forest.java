@@ -19,8 +19,6 @@ public class Forest extends JFrame {
     }
 
     public void paint(Graphics graphics) {
-        for (Tree tree : trees) {
-            tree.draw(graphics);
-        }
+        trees.forEach(tree -> tree.draw(graphics));
     }
 }

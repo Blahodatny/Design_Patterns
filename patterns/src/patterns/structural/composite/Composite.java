@@ -21,8 +21,7 @@ public class Composite extends Component {
         StringBuilder builder = new StringBuilder(String.join("", nCopies(depth, "-")))
                 .append(name)
                 .append("\n");
-        for (Component component : components)
-            builder.append(component.toString(depth + 2));
+        components.stream().map(component -> component.toString(depth + 2)).forEach(builder::append);
         return builder.toString();
     }
 

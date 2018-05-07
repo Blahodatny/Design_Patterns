@@ -3,13 +3,13 @@ package patterns.creational.prototype;
 import patterns.creational.prototype.student.Student;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 class Clone {
     static void cloneAndCompare(List<Student> studentList, List<Student> studentCopy) {
-        for (Student student : studentList)
-            studentCopy.add(student.clone());
+        studentList.stream().map(Student::clone).forEach(studentCopy::add);
 
-        for (int i = 0; i < studentList.size(); i++)
+        IntStream.range(0, studentList.size()).forEach(i -> {
             if (studentList.get(i) != studentCopy.get(i)) {
                 System.out.println(i + ": Shapes are different objects (yay!)");
                 if (studentList.get(i).equals(studentCopy.get(i)))
@@ -18,5 +18,6 @@ class Clone {
                     System.out.println(i + ": But they are not identical (booo!)");
             } else
                 System.out.println(i + ": Shape objects are the same (booo!)");
+        });
     }
 }

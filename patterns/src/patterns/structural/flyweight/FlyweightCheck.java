@@ -3,6 +3,7 @@ package patterns.structural.flyweight;
 import patterns.structural.flyweight.forest.Forest;
 
 import java.awt.*;
+import java.util.stream.IntStream;
 
 public class FlyweightCheck {
     private static final int CANVAS_SIZE = 500;
@@ -11,12 +12,12 @@ public class FlyweightCheck {
 
     public static void check() {
         Forest forest = new Forest();
-        for (int i = 0; i < Math.floor(TREES_TO_DRAW / TREE_TYPES); i++) {
+        IntStream.iterate(0, i -> i < Math.floor(TREES_TO_DRAW / TREE_TYPES), i -> i + 1).forEach(i -> {
             forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
                     "Summer Oak", Color.GREEN, "Oak texture stub");
             forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
                     "Autumn Oak", Color.ORANGE, "Autumn Oak texture stub");
-        }
+        });
         forest.setSize(CANVAS_SIZE, CANVAS_SIZE);
         forest.setVisible(true);
 

@@ -7,8 +7,7 @@ import java.util.List;
 public class StrategyEverydayExample {
 
     private static void printContents(List<Person> people) {
-        for (Person person : people)
-            System.out.println(person.getName() + ", " + person.getAge());
+        people.stream().map(person -> person.getName() + ", " + person.getAge()).forEach(System.out::println);
     }
 
     public static void showExample() {
