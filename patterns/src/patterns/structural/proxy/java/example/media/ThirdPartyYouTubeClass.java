@@ -24,7 +24,7 @@ public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
     }
 
     private void experienceNetworkLatency() {
-        int randomLatency = random();
+        var randomLatency = random();
         IntStream.range(0, randomLatency).forEach(i -> {
             try {
                 Thread.sleep(100);
@@ -59,7 +59,7 @@ public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
         System.out.print("Downloading video... ");
 
         experienceNetworkLatency();
-        Video video = new Video(videoId, "Some video title");
+        var video = new Video(videoId, "Some video title");
 
         System.out.print("Done!" + "\n");
         return video;

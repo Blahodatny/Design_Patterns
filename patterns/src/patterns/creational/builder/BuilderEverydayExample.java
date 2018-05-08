@@ -2,7 +2,7 @@ package patterns.creational.builder;
 
 public class BuilderEverydayExample {
     public static void showExample() {
-        StringBuilder builder = new StringBuilder();
+        var builder = new StringBuilder();
         builder.append("This is an example ");
         builder.append("of the builder pattern. ");
         builder.append("It has methods to append ");

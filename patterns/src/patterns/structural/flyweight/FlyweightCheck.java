@@ -11,7 +11,7 @@ public class FlyweightCheck {
     final private static int TREE_TYPES = 2;
 
     public static void check() {
-        Forest forest = new Forest();
+        var forest = new Forest();
         IntStream.iterate(0, i -> i < Math.floor(TREES_TO_DRAW / TREE_TYPES), i -> i + 1).forEach(i -> {
             forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
                     "Summer Oak", Color.GREEN, "Oak texture stub");

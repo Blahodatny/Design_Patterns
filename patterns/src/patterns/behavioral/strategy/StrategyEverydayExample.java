@@ -11,14 +11,10 @@ public class StrategyEverydayExample {
     }
 
     public static void showExample() {
-        Person bryan = new Person("Bryan", "801-555-1212", 39);
-        Person mark = new Person("Mark", "801-444-1234", 41);
-        Person chris = new Person("Chris", "801-222-5151", 38);
-
         List<Person> people = new ArrayList<>();
-        people.add(bryan);
-        people.add(mark);
-        people.add(chris);
+        people.add(new Person("Bryan", "801-555-1212", 39));
+        people.add(new Person("Mark", "801-444-1234", 41));
+        people.add(new Person("Chris", "801-222-5151", 38));
 
         System.out.println("Not sorted");
         printContents(people);

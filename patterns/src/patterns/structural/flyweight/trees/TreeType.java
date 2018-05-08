@@ -2,7 +2,7 @@ package patterns.structural.flyweight.trees;
 
 import java.awt.*;
 
-public class TreeType {
+class TreeType {
     private String name;
     private Color color;
     private String otherTreeData;

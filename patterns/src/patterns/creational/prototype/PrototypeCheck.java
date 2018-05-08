@@ -14,20 +14,20 @@ public class PrototypeCheck {
         List<Student> students = new ArrayList<>();
         List<Student> studentCopy = new ArrayList<>();
 
-        Deanery deanery = new Deanery();
+        var deanery = new Deanery();
         deanery.setAge(20);
         deanery.setName("George");
         deanery.setProgress(56);
         students.add(deanery);
 
-        Deanery deanery1 = (Deanery) deanery.clone();
+        var deanery1 = (Deanery) deanery.clone();
         students.add(deanery1);
 
-        Deanery deanery2 = new Deanery();
+        var deanery2 = new Deanery();
         deanery.setProgress(100);
         students.add(deanery2);
 
-        Polyclinic polyclinic = new Polyclinic();
+        var polyclinic = new Polyclinic();
         polyclinic.setWeight(56.43);
         polyclinic.setHeight((float) 198.56);
         students.add(polyclinic);

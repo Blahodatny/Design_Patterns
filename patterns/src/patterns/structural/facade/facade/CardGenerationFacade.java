@@ -13,7 +13,7 @@ public class CardGenerationFacade {
 
     public void generateGreetingCard(int age, String sex) throws IOException {
         System.out.println("CardGenerationFacade: generation started!!!");
-        GreetingCard greetingCard = new GreetingCard(age);
+        var greetingCard = new GreetingCard(age);
         Greeting greeting;
         if (sex.equals("man")) {
             if (age < 10)

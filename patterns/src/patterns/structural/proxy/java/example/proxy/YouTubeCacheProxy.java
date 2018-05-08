@@ -24,7 +24,7 @@ public class YouTubeCacheProxy implements ThirdPartyYouTubeLib {
     }
 
     public Video getVideo(String videoId) {
-        Video video = cacheAll.get(videoId);
+        var video = cacheAll.get(videoId);
         if (video == null) {
             video = youtubeService.getVideo(videoId);
             cacheAll.put(videoId, video);

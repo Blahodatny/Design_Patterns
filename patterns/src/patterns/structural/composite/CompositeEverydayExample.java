@@ -1,20 +1,19 @@
 package patterns.structural.composite;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class CompositeEverydayExample {
     public static void showExample() {
-        Map<String, String> personAttributes = new HashMap<>();
+        var personAttributes = new HashMap<String, String>();
 
         personAttributes.put("site_role", "person");
         personAttributes.put("access_role", "limited");
 
-        Map<String, String> groupAttributes = new HashMap<>();
+        var groupAttributes = new HashMap<String, String>();
 
         groupAttributes.put("group_role", "claims");
 
-        Map<String, String> secAttributes = new HashMap<>();
+        var secAttributes = new HashMap<String, String>();
 
         secAttributes.putAll(personAttributes);
         secAttributes.putAll(groupAttributes);

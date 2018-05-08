@@ -13,11 +13,11 @@ public class BridgeCheck {
     }
 
     private static void testDevice(IDevice device) {
-        BasicRemote basicRemote = new BasicRemote(device);
+        var basicRemote = new BasicRemote(device);
         basicRemote.power();
         device.printStatus();
 
-        AdvancedRemote advancedRemote = new AdvancedRemote(device);
+        var advancedRemote = new AdvancedRemote(device);
         advancedRemote.power();
         advancedRemote.mute();
         device.printStatus();

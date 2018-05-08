@@ -5,15 +5,12 @@ import patterns.behavioral.strategy.strategies.QualityOfEmployee;
 
 public class StrategyCheck {
     public static void check() {
-        Quality quality = new Quality();
+        var quality = new Quality();
         quality.setExperience(34.76);
 
-        QualityOfEmployee qualityOfEmployee = new QualityOfEmployee();
-        ProfitToCostRatio profitToCostRatio = new ProfitToCostRatio();
-
-        quality.setStrategy(qualityOfEmployee);
+        quality.setStrategy(new QualityOfEmployee());
         System.out.println(quality.count());
-        quality.setStrategy(profitToCostRatio);
+        quality.setStrategy(new ProfitToCostRatio());
 
         System.out.println(quality.count());
     }

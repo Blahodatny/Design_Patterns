@@ -2,7 +2,7 @@ package patterns.behavioral.state;
 
 public class StateCheck {
     public static void check() {
-        Season season = new Season();
+        var season = new Season();
         System.out.println("Initial state is Winter!!!");
         season.showSeason();
         System.out.println("Another season is coming!!!");

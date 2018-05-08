@@ -13,9 +13,9 @@ public class Firm {
     }
 
     public void showInfo() {
-        String permitClassName = permit.getClass().toString()
+        var permitClassName = permit.getClass().toString()
                 .substring(permit.getClass().toString().lastIndexOf('.') + 1);
-        String orderClassName = order.getClass().toString()
+        var orderClassName = order.getClass().toString()
                 .substring(order.getClass().toString().lastIndexOf('.') + 1);
         System.out.println(permitClassName +
                 " has paper quality: " + permit.paperQuality() +

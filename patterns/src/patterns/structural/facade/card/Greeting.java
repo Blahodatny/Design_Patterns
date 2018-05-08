@@ -22,8 +22,8 @@ public class Greeting {
     }
 
     public void showImage() throws IOException {
-        File f = new File(System.getProperty("user.dir") + "/data/" + imageName);
-        Desktop dt = Desktop.getDesktop();
+        var f = new File(System.getProperty("user.dir") + "/data/" + imageName);
+        var dt = Desktop.getDesktop();
         dt.open(f);
     }
 }

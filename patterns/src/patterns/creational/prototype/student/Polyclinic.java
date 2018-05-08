@@ -19,7 +19,7 @@ public class Polyclinic extends Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Polyclinic that = (Polyclinic) o;
+        var that = (Polyclinic) o;
         return Double.compare(that.weight, weight) == 0 &&
                 Float.compare(that.height, height) == 0;
     }

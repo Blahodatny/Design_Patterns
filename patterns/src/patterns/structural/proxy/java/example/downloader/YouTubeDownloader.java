@@ -1,9 +1,6 @@
 package patterns.structural.proxy.java.example.downloader;
 
-import patterns.structural.proxy.java.example.media.Video;
 import patterns.structural.proxy.java.example.media.interfaces.ThirdPartyYouTubeLib;
-
-import java.util.HashMap;
 
 public class YouTubeDownloader {
     private ThirdPartyYouTubeLib api;
@@ -13,7 +10,7 @@ public class YouTubeDownloader {
     }
 
     public void renderVideoPage(String videoId) {
-        Video video = api.getVideo(videoId);
+        var video = api.getVideo(videoId);
         System.out.println("\n-------------------------------");
         System.out.println("Video page (imagine fancy HTML)");
         System.out.println("ID: " + video.getId());
@@ -23,7 +20,7 @@ public class YouTubeDownloader {
     }
 
     public void renderPopularVideos() {
-        HashMap<String, Video> list = api.popularVideos();
+        var list = api.popularVideos();
         System.out.println("\n-------------------------------");
         System.out.println("Most popular videos on Youtube (imagine fancy HTML)");
         list.values().stream().map(video -> "ID: " + video.getId() + " / Title: " + video.getTitle()).forEach(System.out::println);

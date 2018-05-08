@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class AbstractFactoryExample {
     public static void showExample() {
-        DocumentBuilderFactory abstractFactory = DocumentBuilderFactory.newInstance();
+        var abstractFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder factory = null;
         Document doc = null;
         try {

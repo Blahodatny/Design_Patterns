@@ -22,8 +22,8 @@ class TeenBoy extends GreetingCard {
                 Color.ANSI_RESET +
                 ", image=" + this.imageName +
                 '}');
-        File f = new File(System.getProperty("user.dir") + "/data/" + imageName);
-        Desktop dt = Desktop.getDesktop();
+        var f = new File(System.getProperty("user.dir") + "/data/" + imageName);
+        var dt = Desktop.getDesktop();
         dt.open(f);
     }
 }

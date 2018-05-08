@@ -9,7 +9,7 @@ public class EmployeeCSV {
     private String emailAddress;
 
     public EmployeeCSV(String values) {
-        StringTokenizer tokenizer = new StringTokenizer(values, ",");
+        var tokenizer = new StringTokenizer(values, ",");
         if (tokenizer.hasMoreElements())
             id = Integer.parseInt(tokenizer.nextToken());
 

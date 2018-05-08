@@ -1,14 +1,17 @@
 package patterns.structural.decorator;
 
-import java.io.*;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class DecoratorEverydayExample {
     public static void showExample() {
-        File file = new File("./data/output.txt");
+        var file = new File("./data/output.txt");
         try {
             System.out.println(file.createNewFile());
-            OutputStream oStream = new FileOutputStream(file);
-            DataOutputStream doStream = new DataOutputStream(oStream);
+            var oStream = new FileOutputStream(file);
+            var doStream = new DataOutputStream(oStream);
             doStream.writeChars("text");
             doStream.close();
             oStream.close();

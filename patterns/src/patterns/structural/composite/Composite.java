@@ -18,7 +18,7 @@ public class Composite extends Component {
     }
 
     public String toString(int depth) {
-        StringBuilder builder = new StringBuilder(String.join("", nCopies(depth, "-")))
+        var builder = new StringBuilder(String.join("", nCopies(depth, "-")))
                 .append(name)
                 .append("\n");
         components.stream().map(component -> component.toString(depth + 2)).forEach(builder::append);

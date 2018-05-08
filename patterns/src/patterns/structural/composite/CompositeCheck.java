@@ -3,16 +3,16 @@ package patterns.structural.composite;
 public class CompositeCheck {
     public static void check() {
         // faculty is a root
-        Composite composite = new Composite("FPM");
+        var composite = new Composite("FPM");
 
         // groups
-        Composite group1 = new Composite("KP-61");
+        var group1 = new Composite("KP-61");
         composite.add(group1);
-        Composite group2 = new Composite("KP-62");
+        var group2 = new Composite("KP-62");
         composite.add(group2);
 
         // students
-        Leaf student = new Leaf("Valera");
+        var student = new Leaf("Valera");
         group1.add(student);
         group1.add(new Leaf("Jeniffer"));
 
