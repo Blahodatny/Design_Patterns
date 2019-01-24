@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'com.project'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.derby:derby:10.14.2.0'
+}
