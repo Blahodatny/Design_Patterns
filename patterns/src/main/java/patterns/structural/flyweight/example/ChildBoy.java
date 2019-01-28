@@ -1,9 +1,9 @@
 package patterns.structural.flyweight.example;
 
+import patterns.structural.Helper;
 import patterns.structural.facade.Color;
 
 import java.awt.Desktop;
-import java.io.File;
 import java.io.IOException;
 
 class ChildBoy extends GreetingCard {
@@ -21,7 +21,7 @@ class ChildBoy extends GreetingCard {
                 Color.ANSI_RESET +
                 ", image=" + this.imageName +
                 '}');
-        var f = new File("./data/" + imageName);
+        var f = new Helper().getFile(imageName);
         var dt = Desktop.getDesktop();
         dt.open(f);
     }
