@@ -16,8 +16,7 @@ public class Deanery extends Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        var deanery = (Deanery) o;
-        return progress == deanery.progress;
+        return progress == ((Deanery) o).progress;
     }
 
     public Student clone() {

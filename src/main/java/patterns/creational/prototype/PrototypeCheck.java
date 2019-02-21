@@ -20,8 +20,7 @@ public class PrototypeCheck {
         deanery.setProgress(56);
         students.add(deanery);
 
-        var deanery1 = (Deanery) deanery.clone();
-        students.add(deanery1);
+        students.add(deanery.clone());
 
         var deanery2 = new Deanery();
         deanery.setProgress(100);

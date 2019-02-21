@@ -8,16 +8,16 @@ import java.util.stream.IntStream;
 class Clone {
     static void cloneAndCompare(List<Student> studentList, List<Student> studentCopy) {
         studentList.stream().map(Student::clone).forEach(studentCopy::add);
-
-        IntStream.range(0, studentList.size()).forEach(i -> {
-            if (studentList.get(i) != studentCopy.get(i)) {
-                System.out.println(i + ": Shapes are different objects (yay!)");
-                if (studentList.get(i).equals(studentCopy.get(i)))
-                    System.out.println(i + ": And they are identical (yay!)");
-                else
-                    System.out.println(i + ": But they are not identical (booo!)");
-            } else
-                System.out.println(i + ": Shape objects are the same (booo!)");
-        });
+        IntStream.range(0, studentList.size()).forEach(i ->
+                System.out.println(i + ": " +
+                        (studentList.get(i) != studentCopy.get(i) ?
+                                "Shapes are different objects (yay!)" :
+                                "Shape objects are the same (booo!)") +
+                        "\n" + i + ": " +
+                        (studentList.get(i).equals(studentCopy.get(i)) ?
+                                "And they are identical (yay!)" :
+                                "But they are not identical (booo!)")
+                )
+        );
     }
 }
