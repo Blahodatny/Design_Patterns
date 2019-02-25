@@ -1,6 +1,11 @@
 language: java
-install: gradle assemle
-script: gradle check
+install: true
+
+jdk:
+  - oraclejdk11
+
+script:
+  - ./gradlew build --scan -s
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
