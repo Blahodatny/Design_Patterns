@@ -14,7 +14,10 @@ import static patterns.Pattern.checkPattern;
 class Main {
     public static void main(String[] args) {
         System.out.println("Singleton:");
-        checkPattern(SingletonEverydayExample::showExample, SingletonCheck::check);
+        checkPattern(
+                SingletonEverydayExample::showExample,
+                SingletonCheck::check
+        );
 
         System.out.println("Prototype:");
         checkPattern(() -> {
@@ -24,7 +27,10 @@ class Main {
         checkPattern(BuilderEverydayExample::showExample, BuilderCheck::check);
 
         System.out.println("Abstract factory:");
-        checkPattern(AbstractFactoryExample::showExample, AbstractFactoryCheck::check);
+        checkPattern(
+                AbstractFactoryExample::showExample,
+                AbstractFactoryCheck::check
+        );
 
         System.out.println("Factory method:");
         checkPattern(() -> {

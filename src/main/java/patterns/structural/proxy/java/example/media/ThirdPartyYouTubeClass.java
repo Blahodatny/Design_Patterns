@@ -46,10 +46,22 @@ public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
         experienceNetworkLatency();
         HashMap<String, Video> hMap = new HashMap<>();
         hMap.put("catzzzzzzzzz", new Video("sadgahasgdas", "Catzzzz.avi"));
-        hMap.put("mkafksangasj", new Video("mkafksangasj", "Dog play with ball.mp4"));
-        hMap.put("dancescideoo", new Video("asdfas3ffasd", "Dancing video.mpq"));
-        hMap.put("dlsdk5jfslaf", new Video("dlsdk5jfslaf", "Barcelona vs RealM.mov"));
-        hMap.put("3sdfgsd1j333", new Video("3sdfgsd1j333", "Programing lesson#1.avi"));
+        hMap.put(
+                "mkafksangasj",
+                new Video("mkafksangasj", "Dog play with ball.mp4")
+        );
+        hMap.put(
+                "dancescideoo",
+                new Video("asdfas3ffasd", "Dancing video.mpq")
+        );
+        hMap.put(
+                "dlsdk5jfslaf",
+                new Video("dlsdk5jfslaf", "Barcelona vs RealM.mov")
+        );
+        hMap.put(
+                "3sdfgsd1j333",
+                new Video("3sdfgsd1j333", "Programing lesson#1.avi")
+        );
 
         System.out.print("Done!" + "\n");
         return hMap;

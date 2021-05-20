@@ -8,8 +8,7 @@ import patterns.structural.facade.card.GreetingCard;
 import java.io.IOException;
 
 public class CardGenerationFacade {
-    public CardGenerationFacade() {
-    }
+    public CardGenerationFacade() { }
 
     public void generateGreetingCard(int age, String sex) throws IOException {
         System.out.println("CardGenerationFacade: generation started!!!");
@@ -27,7 +26,7 @@ public class CardGenerationFacade {
                 greeting = new Greeting(Color.ANSI_PURPLE, "woman/teen/6.jpg");
         }
 
-        greetingCard = GenerateCard.generate(greetingCard, greeting);
+        GenerateCard.generate(greetingCard, greeting);
         System.out.println(greetingCard.toString());
         greetingCard.getGreeting().showImage();
         System.out.println("CardGenerationFacade: generation finished!!!");

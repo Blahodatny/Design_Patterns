@@ -13,8 +13,9 @@ public class Manual {
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
 
-    public Manual(Type type, int seats, Engine engine, Transmission transmission,
-                  TripComputer tripComputer, GPSNavigator gpsNavigator) {
+    public Manual(Type type, int seats, Engine engine,
+            Transmission transmission,
+            TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.type = type;
         this.seats = seats;
         this.engine = engine;
@@ -26,7 +27,8 @@ public class Manual {
     public String print() {
         return ("Type of car: " + type + "\n") +
                 "Count of seats: " + seats + "\n" +
-                "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n" +
+                "Engine: volume - " + engine.getVolume() + "; mileage - " +
+                engine.getMileage() + "\n" +
                 "Transmission: " + transmission + "\n" +
                 "Trip Computer: Trip Computer" + "\n" +
                 "GPS Navigator: GPS Navigator" + "\n";

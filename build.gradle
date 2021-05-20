@@ -1,22 +1,13 @@
 plugins {
     id 'java'
-    id 'com.gradle.build-scan' version '2.1'
+    id 'application'
 }
 
 group 'com.project'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 12
+sourceCompatibility = 16
 
 repositories {
     mavenCentral()
-}
-
-buildScan {
-    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
-    termsOfServiceAgree = 'yes'
-}
-
-dependencies {
-    implementation 'org.apache.derby:derby:10.14.2.0'
 }

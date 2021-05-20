@@ -23,19 +23,11 @@ public class EmployeeCSV {
             emailAddress = tokenizer.nextToken();
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
-    public String getFirstName() {
-        return firstName;
-    }
+    public String getFirstName() { return firstName; }
 
-    public String getLastName() {
-        return lastName;
-    }
+    public String getLastName() { return lastName; }
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+    public String getEmailAddress() { return emailAddress; }
 }

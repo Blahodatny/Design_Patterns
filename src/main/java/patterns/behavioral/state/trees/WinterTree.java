@@ -9,6 +9,7 @@ public class WinterTree extends Tree {
     }
 
     public void showSeason() {
-        System.out.println("This is winter tree!!! " + color + countOfLeaves + Color.ANSI_RESET);
+        System.out.println("This is winter tree!!! " + color + countOfLeaves +
+                Color.ANSI_RESET);
     }
 }

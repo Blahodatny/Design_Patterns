@@ -5,7 +5,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ChainEverydayExample {
-    private static final Logger logger = Logger.getLogger(ChainEverydayExample.class.getName());
+    private static final Logger logger =
+            Logger.getLogger(ChainEverydayExample.class.getName());
 
     public static void showExample() {
         //level to log at

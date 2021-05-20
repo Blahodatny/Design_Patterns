@@ -24,35 +24,19 @@ public class Car {
         this.gpsNavigator = gpsNavigator;
     }
 
-    public void setFuel(double fuel) {
-        Car.fuel = fuel;
-    }
+    public void setFuel(double fuel) { Car.fuel = fuel; }
 
-    public Type getType() {
-        return type;
-    }
+    public Type getType() { return type; }
 
-    public int getSeats() {
-        return seats;
-    }
+    public int getSeats() { return seats; }
 
-    public Engine getEngine() {
-        return engine;
-    }
+    public Engine getEngine() { return engine; }
 
-    public Transmission getTransmission() {
-        return transmission;
-    }
+    public Transmission getTransmission() { return transmission; }
 
-    public TripComputer getTripComputer() {
-        return tripComputer;
-    }
+    public TripComputer getTripComputer() { return tripComputer; }
 
-    public GPSNavigator getGpsNavigator() {
-        return gpsNavigator;
-    }
+    public GPSNavigator getGpsNavigator() { return gpsNavigator; }
 
-    public static double getFuel() {
-        return fuel;
-    }
+    public static double getFuel() { return fuel; }
 }

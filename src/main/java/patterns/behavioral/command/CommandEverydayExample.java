@@ -14,15 +14,13 @@ public class CommandEverydayExample {
 }
 
 class Task implements Runnable {
-    private int num1;
-    private int num2;
+    private final int num1;
+    private final int num2;
 
     Task(int num1, int num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
 
-    public void run() { //execute method
-        System.out.println(num1 * num2); //receiver
-    }
+    public void run() { System.out.println(num1 * num2); }
 }

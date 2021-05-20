@@ -7,11 +7,7 @@ import patterns.creational.abstract_factory.permit.PermanentPermit;
 
 public class PermanentBringOut implements FirmFactory {
 
-    public Document createOrder() {
-        return new BringOutOrder();
-    }
+    public Document createOrder() { return new BringOutOrder(); }
 
-    public Document createPermit() {
-        return new PermanentPermit();
-    }
+    public Document createPermit() { return new PermanentPermit(); }
 }

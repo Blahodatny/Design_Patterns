@@ -3,9 +3,9 @@ package patterns.structural.flyweight.trees;
 import java.awt.Graphics;
 
 public class Tree {
-    private int x;
-    private int y;
-    private TreeType type;
+    private final int x;
+    private final int y;
+    private final TreeType type;
 
     public Tree(int x, int y, TreeType type) {
         this.x = x;
@@ -13,7 +13,5 @@ public class Tree {
         this.type = type;
     }
 
-    public void draw(Graphics g) {
-        type.draw(g, x, y);
-    }
+    public void draw(Graphics g) { type.draw(g, x, y); }
 }

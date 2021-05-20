@@ -17,7 +17,10 @@ public class AbstractFactoryExample {
         try {
             factory = abstractFactory.newDocumentBuilder();
             doc = factory.parse(
-                    new ByteArrayInputStream("<document><body><stock>AAPL</stock></body></document>".getBytes()));
+                    new ByteArrayInputStream(
+                            ("<document><body><stock>AAPL</stock></body" +
+                                    "></document>")
+                                    .getBytes()));
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
@@ -25,7 +28,8 @@ public class AbstractFactoryExample {
         assert doc != null;
         doc.getDocumentElement().normalize();
 
-        System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+        System.out.println(
+                "Root element: " + doc.getDocumentElement().getNodeName());
         System.out.println(abstractFactory.getClass());
         System.out.println(factory.getClass());
     }

@@ -4,7 +4,7 @@ import patterns.structural.decorator.WorkerDecorator;
 import patterns.structural.decorator.interfaces.WorkerComponent;
 
 public class HeadDecorator extends WorkerDecorator {
-    private int workExperience;
+    private final int workExperience;
 
     public HeadDecorator(WorkerComponent worker, int workExperience) {
         super(worker);
@@ -20,6 +20,7 @@ public class HeadDecorator extends WorkerDecorator {
     }
 
     private String analyze() {
-        return "\nHis work experience is " + workExperience + " and he has analyzed them";
+        return "\nHis work experience is " + workExperience +
+                " and he has analyzed them";
     }
 }

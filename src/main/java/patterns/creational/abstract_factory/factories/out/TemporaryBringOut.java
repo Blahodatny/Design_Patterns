@@ -7,11 +7,7 @@ import patterns.creational.abstract_factory.permit.TemporaryPermit;
 
 public class TemporaryBringOut implements FirmFactory {
 
-    public Document createOrder() {
-        return new BringOutOrder();
-    }
+    public Document createOrder() { return new BringOutOrder(); }
 
-    public Document createPermit() {
-        return new TemporaryPermit();
-    }
+    public Document createPermit() { return new TemporaryPermit(); }
 }

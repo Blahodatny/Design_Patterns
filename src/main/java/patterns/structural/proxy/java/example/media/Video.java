@@ -1,9 +1,9 @@
 package patterns.structural.proxy.java.example.media;
 
 public class Video {
-    private String id;
-    private String title;
-    private String data;
+    private final String id;
+    private final String title;
+    private final String data;
 
     Video(String id, String title) {
         this.id = id;
@@ -11,15 +11,9 @@ public class Video {
         this.data = "Random video.";
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() { return title; }
 
-    public String getData() {
-        return data;
-    }
+    public String getData() { return data; }
 }

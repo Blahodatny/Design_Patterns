@@ -4,9 +4,9 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 class TreeType {
-    private String name;
-    private Color color;
-    private String otherTreeData;
+    private final String name;
+    private final Color color;
+    private final String otherTreeData;
 
     TreeType(String name, Color color, String otherTreeData) {
         this.name = name;

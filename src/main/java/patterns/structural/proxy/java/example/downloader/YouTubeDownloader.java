@@ -5,9 +5,7 @@ import patterns.structural.proxy.java.example.media.interfaces.ThirdPartyYouTube
 public class YouTubeDownloader {
     private ThirdPartyYouTubeLib api;
 
-    public YouTubeDownloader(ThirdPartyYouTubeLib api) {
-        this.api = api;
-    }
+    public YouTubeDownloader(ThirdPartyYouTubeLib api) { this.api = api; }
 
     public void renderVideoPage(String videoId) {
         var video = api.getVideo(videoId);
@@ -22,8 +20,13 @@ public class YouTubeDownloader {
     public void renderPopularVideos() {
         var list = api.popularVideos();
         System.out.println("\n-------------------------------");
-        System.out.println("Most popular videos on Youtube (imagine fancy HTML)");
-        list.values().stream().map(video -> "ID: " + video.getId() + " / Title: " + video.getTitle()).forEach(System.out::println);
+        System.out.println("Most popular videos on Youtube (imagine fancy " +
+                "HTML)");
+        list.values()
+                .stream()
+                .map(video -> "ID: " + video.getId() + " / Title: " +
+                        video.getTitle())
+                .forEach(System.out::println);
         System.out.println("-------------------------------\n");
     }
 }

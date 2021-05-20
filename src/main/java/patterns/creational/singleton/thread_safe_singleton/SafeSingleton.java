@@ -4,9 +4,7 @@ public final class SafeSingleton {
     private static volatile SafeSingleton instance;
     public static String value;
 
-    private SafeSingleton(String value) {
-        SafeSingleton.value = value;
-    }
+    private SafeSingleton(String value) { SafeSingleton.value = value; }
 
     public static void getInstance(String value) {
         if (instance == null)

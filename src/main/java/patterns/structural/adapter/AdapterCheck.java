@@ -13,7 +13,12 @@ import java.util.List;
 public class AdapterCheck {
     public static void check() {
         List<Employee> employees = new ArrayList<>();
-        employees.add(new EmployeeDB("1", "George", "Michael", "email@email.com"));
+        employees.add(new EmployeeDB(
+                "1",
+                "George",
+                "Michael",
+                "email@email.com"
+        ));
         employees.add(new EmployeeLdapAdapter(
                 new EmployeeLdap("chewie", "John", "Mike", "ldap@email.com")));
         employees.add(new EmployeeCSVAdapter(

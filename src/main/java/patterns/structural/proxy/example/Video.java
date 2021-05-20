@@ -8,6 +8,7 @@ public class Video implements Action {
     }
 
     public void addToPlayList(User user) {
-        System.out.println(user.getName() + ", video has been added to play list!!!");
+        System.out.println(
+                user.getName() + ", video has been added to play list!!!");
     }
 }

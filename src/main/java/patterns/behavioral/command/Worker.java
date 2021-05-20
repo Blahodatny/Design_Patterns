@@ -5,7 +5,5 @@ class Worker {
         drill.setExecutor(executor);
     }
 
-    void executeDrillByHimself(Drill drill) {
-        drill.execute();
-    }
+    void executeDrillByHimself(Drill drill) { drill.execute(); }
 }

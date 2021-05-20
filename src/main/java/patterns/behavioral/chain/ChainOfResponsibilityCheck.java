@@ -20,8 +20,8 @@ public class ChainOfResponsibilityCheck {
         exam.add("Physics");
         exam.add("Programming");
 
-        var var = exam.size();
-        for (var i = 0; i < var; i++)
+        var size = exam.size();
+        for (var i = 0; i < size; i++)
             System.out.println(chain.check(exam));
     }
 }

@@ -7,36 +7,21 @@ class Season {
 
     private Tree currentTree;
 
-    private WinterTree winterTree = new WinterTree();
-    private SpringTree springTree = new SpringTree();
-    private SummerTree summerTree = new SummerTree();
-    private AutumnTree autumnTree = new AutumnTree();
+    private final WinterTree winterTree = new WinterTree();
+    private final SpringTree springTree = new SpringTree();
+    private final SummerTree summerTree = new SummerTree();
+    private final AutumnTree autumnTree = new AutumnTree();
 
-    Season() {
-        currentTree = winterTree;
-    }
+    Season() { currentTree = winterTree; }
 
     void setCurrentTree(Name name) {
         switch (name) {
-            case AUTUMN:
-                currentTree = autumnTree;
-                break;
-
-            case SPRING:
-                currentTree = springTree;
-                break;
-
-            case SUMMER:
-                currentTree = summerTree;
-                break;
-
-            case WINTER:
-                currentTree = winterTree;
-                break;
+            case AUTUMN -> currentTree = autumnTree;
+            case SPRING -> currentTree = springTree;
+            case SUMMER -> currentTree = summerTree;
+            case WINTER -> currentTree = winterTree;
         }
     }
 
-    void showSeason() {
-        currentTree.showSeason();
-    }
+    void showSeason() { currentTree.showSeason(); }
 }

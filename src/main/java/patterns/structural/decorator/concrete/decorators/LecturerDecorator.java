@@ -4,7 +4,7 @@ import patterns.structural.decorator.WorkerDecorator;
 import patterns.structural.decorator.interfaces.WorkerComponent;
 
 public class LecturerDecorator extends WorkerDecorator {
-    private int speedOfReading;
+    private final int speedOfReading;
 
     public LecturerDecorator(WorkerComponent worker, int speedOfReading) {
         super(worker);
@@ -20,7 +20,8 @@ public class LecturerDecorator extends WorkerDecorator {
     }
 
     private String read() {
-        return "\nHis speed of reading is " + speedOfReading + " and he has read them";
+        return "\nHis speed of reading is " + speedOfReading +
+                " and he has read them";
     }
 
     private String conduct() {

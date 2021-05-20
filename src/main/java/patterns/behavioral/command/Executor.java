@@ -1,5 +1,3 @@
 package patterns.behavioral.command;
 
-public interface Executor {
-    int drill();
-}
+public interface Executor { int drill(); }

@@ -1,8 +1,7 @@
 package patterns.behavioral.strategy;
 
 public class Person {
-
-    private int age;
+    private final int age;
     private String name;
     private String phoneNumber;
 
@@ -12,15 +11,9 @@ public class Person {
         this.age = age;
     }
 
-    int getAge() {
-        return age;
-    }
+    int getAge() { return age; }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 }

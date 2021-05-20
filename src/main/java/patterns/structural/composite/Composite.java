@@ -7,25 +7,21 @@ import static java.util.Collections.nCopies;
 
 class Composite extends Component {
 
-    Composite(String name) {
-        this.name = name;
-    }
+    Composite(String name) { this.name = name; }
 
-    private List<Component> components = new ArrayList<>();
+    private final List<Component> components = new ArrayList<>();
 
-    public void add(Component component) {
-        components.add(component);
-    }
+    public void add(Component component) { components.add(component); }
 
     public String toString(int depth) {
         var builder = new StringBuilder(String.join("", nCopies(depth, "-")))
                 .append(name)
                 .append("\n");
-        components.stream().map(component -> component.toString(depth + 2)).forEach(builder::append);
+        components.stream()
+                .map(component -> component.toString(depth + 2))
+                .forEach(builder::append);
         return builder.toString();
     }
 
-    public String passExam() {
-        return "Group " + name + " passes exam now!!!";
-    }
+    public String passExam() { return "Group " + name + " passes exam now!!!"; }
 }

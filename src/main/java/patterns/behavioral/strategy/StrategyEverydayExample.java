@@ -5,10 +5,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class StrategyEverydayExample {
-
     private static void printContents(List<Person> people) {
-        people
-                .stream()
+        people.stream()
                 .map(person -> person.getName() + ", " + person.getAge())
                 .forEach(System.out::println);
     }

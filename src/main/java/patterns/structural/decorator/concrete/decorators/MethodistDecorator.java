@@ -4,7 +4,7 @@ import patterns.structural.decorator.WorkerDecorator;
 import patterns.structural.decorator.interfaces.WorkerComponent;
 
 public class MethodistDecorator extends WorkerDecorator {
-    private double attention;
+    private final double attention;
 
     public MethodistDecorator(WorkerComponent worker, double attention) {
         super(worker);
@@ -20,6 +20,7 @@ public class MethodistDecorator extends WorkerDecorator {
     }
 
     private String help() {
-        return "\nHis attention is " + attention + " and he has assisted to lecturer";
+        return "\nHis attention is " + attention +
+                " and he has assisted to lecturer";
     }
 }

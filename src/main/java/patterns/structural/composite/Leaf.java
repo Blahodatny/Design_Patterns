@@ -13,7 +13,8 @@ public class Leaf extends Component {
     }
 
     public String toString(int depth) {
-        return String.join("", nCopies(depth, "-")).concat("Student " + name + "\n");
+        return String.join("", nCopies(depth, "-"))
+                .concat("Student " + name + "\n");
     }
 
     public String passExam() {

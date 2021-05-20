@@ -15,17 +15,11 @@ public class CarManualBuilder implements Builder {
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
 
-    public void setType(Type type) {
-        this.type = type;
-    }
+    public void setType(Type type) { this.type = type; }
 
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
+    public void setSeats(int seats) { this.seats = seats; }
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
+    public void setEngine(Engine engine) { this.engine = engine; }
 
     public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
@@ -40,6 +34,13 @@ public class CarManualBuilder implements Builder {
     }
 
     public Manual getResult() {
-        return new Manual(type, seats, engine, transmission, tripComputer, gpsNavigator);
+        return new Manual(
+                type,
+                seats,
+                engine,
+                transmission,
+                tripComputer,
+                gpsNavigator
+        );
     }
 }

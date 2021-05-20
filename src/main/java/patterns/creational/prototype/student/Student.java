@@ -6,8 +6,7 @@ public abstract class Student {
     private int age;
     private String name;
 
-    Student() {
-    }
+    Student() { }
 
     Student(Student student) {
         if (student != null) {
@@ -19,18 +18,16 @@ public abstract class Student {
     public abstract Student clone();
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         var student = (Student) o;
         return age == student.age &&
                 Objects.equals(name, student.name);
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) { this.age = age; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 }

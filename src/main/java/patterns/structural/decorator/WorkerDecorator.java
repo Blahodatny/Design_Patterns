@@ -6,15 +6,11 @@ public abstract class WorkerDecorator implements WorkerComponent {
 
     protected WorkerComponent worker;
 
-    public WorkerDecorator(WorkerComponent worker) {
-        this.worker = worker;
-    }
+    public WorkerDecorator(WorkerComponent worker) { this.worker = worker; }
 
     public String makeOutLectures(int quantity, String day) {
         return worker.makeOutLectures(quantity, day);
     }
 
-    public String makeOutExams(String day) {
-        return worker.makeOutExams(day);
-    }
+    public String makeOutExams(String day) { return worker.makeOutExams(day); }
 }

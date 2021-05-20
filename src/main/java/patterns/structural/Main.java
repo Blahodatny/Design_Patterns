@@ -13,7 +13,6 @@ import patterns.structural.facade.FacadeEverydayExample;
 import patterns.structural.flyweight.FlyweightCheck;
 import patterns.structural.flyweight.FlyweightEverydayExample;
 import patterns.structural.proxy.ProxyCheck;
-import patterns.structural.proxy.ProxyEverydayExample;
 
 import static patterns.Pattern.checkPattern;
 
@@ -26,19 +25,28 @@ class Main {
         checkPattern(BridgeEverydayExample::showExample, BridgeCheck::check);
 
         System.out.println("Decorator:");
-        checkPattern(DecoratorEverydayExample::showExample, DecoratorCheck::check);
+        checkPattern(
+                DecoratorEverydayExample::showExample,
+                DecoratorCheck::check
+        );
 
         System.out.println("Composite:");
-        checkPattern(CompositeEverydayExample::showExample, CompositeCheck::check);
+        checkPattern(
+                CompositeEverydayExample::showExample,
+                CompositeCheck::check
+        );
 
         System.out.println("Facade:");
         checkPattern(FacadeEverydayExample::showExample, FacadeCheck::check);
 
         System.out.println("Flyweight:");
-        checkPattern(FlyweightEverydayExample::showExample, FlyweightCheck::check);
+        checkPattern(
+                FlyweightEverydayExample::showExample,
+                FlyweightCheck::check
+        );
 
         System.out.println("Proxy:");
-//        checkPattern(ProxyEverydayExample::showExample, ProxyCheck::check);
+        //        checkPattern(ProxyEverydayExample::showExample, ProxyCheck::check);
         checkPattern(() -> {
         }, ProxyCheck::check);
     }

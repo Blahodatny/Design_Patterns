@@ -7,9 +7,9 @@ import patterns.structural.proxy.java.example.media.interfaces.ThirdPartyYouTube
 import java.util.HashMap;
 
 public class YouTubeCacheProxy implements ThirdPartyYouTubeLib {
-    private ThirdPartyYouTubeLib youtubeService;
+    private final ThirdPartyYouTubeLib youtubeService;
     private HashMap<String, Video> cachePopular = new HashMap<>();
-    private HashMap<String, Video> cacheAll = new HashMap<>();
+    private final HashMap<String, Video> cacheAll = new HashMap<>();
 
     public YouTubeCacheProxy() {
         this.youtubeService = new ThirdPartyYouTubeClass();

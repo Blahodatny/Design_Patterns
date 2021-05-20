@@ -6,12 +6,14 @@ import patterns.structural.proxy.java.example.proxy.YouTubeCacheProxy;
 
 public class ProxyEverydayExample {
     public static void showExample() {
-        var naiveDownloader = new YouTubeDownloader(new ThirdPartyYouTubeClass());
+        var naiveDownloader =
+                new YouTubeDownloader(new ThirdPartyYouTubeClass());
         var smartDownloader = new YouTubeDownloader(new YouTubeCacheProxy());
 
         var naive = test(naiveDownloader);
         var smart = test(smartDownloader);
-        System.out.print("Time saved by caching proxy: " + (naive - smart) + "ms");
+        System.out.print(
+                "Time saved by caching proxy: " + (naive - smart) + "ms");
     }
 
     private static long test(YouTubeDownloader downloader) {

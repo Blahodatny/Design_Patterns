@@ -9,6 +9,7 @@ public class SpringTree extends Tree {
     }
 
     public void showSeason() {
-        System.out.println("Spring tree is here!!! " + color + countOfLeaves + Color.ANSI_RESET);
+        System.out.println("Spring tree is here!!! " + color + countOfLeaves +
+                Color.ANSI_RESET);
     }
 }

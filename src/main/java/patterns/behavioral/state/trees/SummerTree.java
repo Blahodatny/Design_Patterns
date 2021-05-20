@@ -9,6 +9,7 @@ public class SummerTree extends Tree {
     }
 
     public void showSeason() {
-        System.out.println("This is summer tree!!! " + color + countOfLeaves + Color.ANSI_RESET);
+        System.out.println("This is summer tree!!! " + color + countOfLeaves +
+                Color.ANSI_RESET);
     }
 }

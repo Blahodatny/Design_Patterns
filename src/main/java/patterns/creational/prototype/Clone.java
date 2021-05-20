@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 class Clone {
-    static void cloneAndCompare(List<Student> studentList, List<Student> studentCopy) {
+    static void cloneAndCompare(List<Student> studentList,
+            List<Student> studentCopy) {
         studentList.stream().map(Student::clone).forEach(studentCopy::add);
         IntStream.range(0, studentList.size()).forEach(i ->
                 System.out.println(i + ": " +

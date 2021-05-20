@@ -7,21 +7,13 @@ public class Radio implements Device {
     private int volume = 30;
     private int channel = 1;
 
-    public boolean isEnabled() {
-        return on;
-    }
+    public boolean isEnabled() { return on; }
 
-    public void enable() {
-        on = true;
-    }
+    public void enable() { on = true; }
 
-    public void disable() {
-        on = false;
-    }
+    public void disable() { on = false; }
 
-    public int getVolume() {
-        return volume;
-    }
+    public int getVolume() { return volume; }
 
     public void setVolume(int volume) {
         if (volume > 100)
@@ -31,13 +23,9 @@ public class Radio implements Device {
         this.volume = volume;
     }
 
-    public int getChannel() {
-        return channel;
-    }
+    public int getChannel() { return channel; }
 
-    public void setChannel(int channel) {
-        this.channel = channel;
-    }
+    public void setChannel(int channel) { this.channel = channel; }
 
     public void printStatus() {
         System.out.println("|||||");

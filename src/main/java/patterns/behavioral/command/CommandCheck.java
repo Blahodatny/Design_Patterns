@@ -17,6 +17,7 @@ public class CommandCheck {
         workers[1].setExecutor(drills[1], small);
         workers[2].setExecutor(drills[2], medium);
 
-        IntStream.range(0, workers.length).forEach(i -> workers[i].executeDrillByHimself(drills[i]));
+        IntStream.range(0, workers.length)
+                .forEach(i -> workers[i].executeDrillByHimself(drills[i]));
     }
 }

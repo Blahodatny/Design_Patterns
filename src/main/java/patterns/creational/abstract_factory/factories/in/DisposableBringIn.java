@@ -7,11 +7,7 @@ import patterns.creational.abstract_factory.permit.DisposablePermit;
 
 public class DisposableBringIn implements FirmFactory {
 
-    public Document createOrder() {
-        return new BringInOrder();
-    }
+    public Document createOrder() { return new BringInOrder(); }
 
-    public Document createPermit() {
-        return new DisposablePermit();
-    }
+    public Document createPermit() { return new DisposablePermit(); }
 }

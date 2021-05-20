@@ -4,8 +4,7 @@ public class Polyclinic extends Student {
     private double weight;
     private float height;
 
-    public Polyclinic() {
-    }
+    public Polyclinic() { }
 
     private Polyclinic(Polyclinic polyclinic) {
         super(polyclinic);
@@ -16,23 +15,20 @@ public class Polyclinic extends Student {
     }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        if (!super.equals(o))
+            return false;
         var that = (Polyclinic) o;
         return Double.compare(that.weight, weight) == 0 &&
                 Float.compare(that.height, height) == 0;
     }
 
-    public Student clone() {
-        return new Polyclinic(this);
-    }
+    public Student clone() { return new Polyclinic(this); }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+    public void setWeight(double weight) { this.weight = weight; }
 
-    public void setHeight(float height) {
-        this.height = height;
-    }
+    public void setHeight(float height) { this.height = height; }
 }

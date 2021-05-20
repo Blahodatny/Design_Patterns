@@ -4,8 +4,8 @@ import patterns.creational.abstract_factory.Document;
 import patterns.creational.abstract_factory.factories.FirmFactory;
 
 public class Firm {
-    private Document permit;
-    private Document order;
+    private final Document permit;
+    private final Document order;
 
     public Firm(FirmFactory factory) {
         permit = factory.createPermit();

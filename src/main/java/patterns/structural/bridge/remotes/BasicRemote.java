@@ -6,8 +6,7 @@ import patterns.structural.bridge.remotes.interfaces.Remote;
 public class BasicRemote implements Remote {
     Device device;
 
-    BasicRemote() {
-    }
+    BasicRemote() { }
 
     public BasicRemote(Device device) {
         this.device = device;

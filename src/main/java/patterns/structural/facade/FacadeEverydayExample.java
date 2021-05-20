@@ -8,12 +8,12 @@ import java.net.URL;
 public class FacadeEverydayExample {
     public static void showExample() {
         try {
-            new BufferedReader
-                    (new InputStreamReader
-                            (new URL("http", "www.pluralsight.com", 80, "/author/bryan-hansen")
-                                    .openStream()))
-                    .lines()
-                    .forEach(System.out::println);
+            new BufferedReader(new InputStreamReader(new URL(
+                    "http",
+                    "www.pluralsight.com",
+                    80,
+                    "/author/bryan-hansen"
+            ).openStream())).lines().forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }

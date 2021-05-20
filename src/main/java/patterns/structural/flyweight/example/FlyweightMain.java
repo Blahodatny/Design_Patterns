@@ -8,7 +8,11 @@ class FlyweightMain {
         var chars = doc.toCharArray();
 
         var factory = new GreetingFactory();
-        var array = new String[]{"man/teen/idea.png", "man/child/4.jpg", "woman/child/5.jpg"};
+        var array = new String[]{
+                "man/teen/idea.png",
+                "man/child/4.jpg",
+                "woman/child/5.jpg"
+        };
 
         for (var i = 0; i < chars.length; i++) {
             var greetingCard = factory.getGreeting(chars[i]);
